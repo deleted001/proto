@@ -2646,7 +2646,7 @@ var clazzNameRegisters2 = map[string]map[int]int32{
 		142: 1073147056,  // 3ff6ecb0
 		141: 1073147056,  // 3ff6ecb0
 		140: 1073147056,  // 3ff6ecb0
-		139: 1073147056,  // 3ff6ecb0
+		139: 1107549484,  // 0x4203dd2c
 
 	},
 	Predicate_userProfilePhotoEmpty: {
@@ -25986,6 +25986,7 @@ var clazzIdNameRegisters2 = map[int32]string{
 	-1976353651: Predicate_payments_getPaymentForm,                            // 8a333c8d
 	-619695760:  Predicate_payments_validateRequestedInfo,                     // db103170
 	818134173:   Predicate_payments_sendPaymentForm,                           // 30c3bc9d
+	1107549484:  Predicate_user,                                               // 0x4203dd2c
 	-516145888:  Predicate_channelFull,                                        // e13c3d20
 	-1673717362: Predicate_inputPeerNotifySettings,                            // 9c3d198e
 	-1353671392: Predicate_peerNotifySettings,                                 // af509d20
