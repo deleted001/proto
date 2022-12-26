@@ -25,8 +25,8 @@ var _ = math.Inf
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 // Bool <--
-//  + TL_boolFalse
-//  + TL_boolTrue
+//   - TL_boolFalse
+//   - TL_boolTrue
 type Bool struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -177,7 +177,7 @@ func (m *TLBoolTrue) GetData2() *Bool {
 }
 
 // Double <--
-//  + TL_double
+//   - TL_double
 type Double struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -289,7 +289,7 @@ func (m *TLDouble) GetData2() *Double {
 }
 
 // Error <--
-//  + TL_error
+//   - TL_error
 type Error struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -409,7 +409,7 @@ func (m *TLError) GetData2() *Error {
 }
 
 // Int32 <--
-//  + TL_int32
+//   - TL_int32
 type Int32 struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -521,8 +521,8 @@ func (m *TLInt32) GetData2() *Int32 {
 }
 
 // Int64 <--
-//  + TL_long
-//  + TL_int64
+//   - TL_long
+//   - TL_int64
 type Int64 struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -681,7 +681,7 @@ func (m *TLInt64) GetData2() *Int64 {
 }
 
 // Null <--
-//  + TL_null
+//   - TL_null
 type Null struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -785,7 +785,7 @@ func (m *TLNull) GetData2() *Null {
 }
 
 // String <--
-//  + TL_string
+//   - TL_string
 type String struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -897,7 +897,7 @@ func (m *TLString) GetData2() *String {
 }
 
 // True <--
-//  + TL_true
+//   - TL_true
 type True struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`

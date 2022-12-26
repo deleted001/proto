@@ -24,8 +24,7 @@ var _ = math.Inf
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 // BindAuthKeyInner <--
-//  + TL_bind_auth_key_inner
-//
+//   - TL_bind_auth_key_inner
 type BindAuthKeyInner struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -170,8 +169,7 @@ func (m *TLBindAuthKeyInner) GetData2() *BindAuthKeyInner {
 }
 
 // Client_DH_Inner_Data <--
-//  + TL_client_DH_inner_data
-//
+//   - TL_client_DH_inner_data
 type Client_DH_Inner_Data struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -308,10 +306,9 @@ func (m *TLClient_DHInnerData) GetData2() *Client_DH_Inner_Data {
 }
 
 // DestroyAuthKeyRes <--
-//  + TL_destroy_auth_key_ok
-//  + TL_destroy_auth_key_none
-//  + TL_destroy_auth_key_fail
-//
+//   - TL_destroy_auth_key_ok
+//   - TL_destroy_auth_key_none
+//   - TL_destroy_auth_key_fail
 type DestroyAuthKeyRes struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -512,11 +509,10 @@ func (m *TLDestroyAuthKeyFail) GetData2() *DestroyAuthKeyRes {
 }
 
 // P_Q_inner_data <--
-//  + TL_p_q_inner_data
-//  + TL_p_q_inner_data_dc
-//  + TL_p_q_inner_data_temp
-//  + TL_p_q_inner_data_temp_dc
-//
+//   - TL_p_q_inner_data
+//   - TL_p_q_inner_data_dc
+//   - TL_p_q_inner_data_temp
+//   - TL_p_q_inner_data_temp_dc
 type P_QInnerData struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -829,8 +825,7 @@ func (m *TLPQInnerDataTempDc) GetData2() *P_QInnerData {
 }
 
 // ResPQ <--
-//  + TL_resPQ
-//
+//   - TL_resPQ
 type ResPQ struct {
 	PredicateName               string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor                 TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -967,9 +962,8 @@ func (m *TLResPQ) GetData2() *ResPQ {
 }
 
 // Server_DH_Params <--
-//  + TL_server_DH_params_fail
-//  + TL_server_DH_params_ok
-//
+//   - TL_server_DH_params_fail
+//   - TL_server_DH_params_ok
 type Server_DH_Params struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -1154,8 +1148,7 @@ func (m *TLServer_DHParamsOk) GetData2() *Server_DH_Params {
 }
 
 // Server_DH_inner_data <--
-//  + TL_server_DH_inner_data
-//
+//   - TL_server_DH_inner_data
 type Server_DHInnerData struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -1308,10 +1301,9 @@ func (m *TLServer_DHInnerData) GetData2() *Server_DHInnerData {
 }
 
 // Set_client_DH_params_answer <--
-//  + TL_dh_gen_ok
-//  + TL_dh_gen_retry
-//  + TL_dh_gen_fail
-//
+//   - TL_dh_gen_ok
+//   - TL_dh_gen_retry
+//   - TL_dh_gen_fail
 type SetClient_DHParamsAnswer struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`

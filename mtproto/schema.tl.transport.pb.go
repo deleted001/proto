@@ -24,8 +24,7 @@ var _ = math.Inf
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 // AccessPointRule <--
-//  + TL_accessPointRule
-//
+//   - TL_accessPointRule
 type AccessPointRule struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -154,9 +153,8 @@ func (m *TLAccessPointRule) GetData2() *AccessPointRule {
 }
 
 // BadMsgNotification <--
-//  + TL_bad_msg_notification
-//  + TL_bad_server_salt
-//
+//   - TL_bad_msg_notification
+//   - TL_bad_server_salt
 type BadMsgNotification struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -341,9 +339,8 @@ func (m *TLBadServerSalt) GetData2() *BadMsgNotification {
 }
 
 // DestroySessionRes <--
-//  + TL_destroy_session_ok
-//  + TL_destroy_session_none
-//
+//   - TL_destroy_session_ok
+//   - TL_destroy_session_none
 type DestroySessionRes struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -504,8 +501,7 @@ func (m *TLDestroySessionNone) GetData2() *DestroySessionRes {
 }
 
 // FutureSalt <--
-//  + TL_future_salt
-//
+//   - TL_future_salt
 type FutureSalt struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -634,8 +630,7 @@ func (m *TLFutureSalt) GetData2() *FutureSalt {
 }
 
 // FutureSalts <--
-//  + TL_future_salts
-//
+//   - TL_future_salts
 type FutureSalts struct {
 	PredicateName        string          `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor   `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -764,8 +759,7 @@ func (m *TLFutureSalts) GetData2() *FutureSalts {
 }
 
 // HttpWait <--
-//  + TL_http_wait
-//
+//   - TL_http_wait
 type HttpWait struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -894,9 +888,8 @@ func (m *TLHttpWait) GetData2() *HttpWait {
 }
 
 // IpPort <--
-//  + TL_ipPort
-//  + TL_ipPortSecret
-//
+//   - TL_ipPort
+//   - TL_ipPortSecret
 type IpPort struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -1073,9 +1066,8 @@ func (m *TLIpPortSecret) GetData2() *IpPort {
 }
 
 // MsgDetailedInfo <--
-//  + TL_msg_detailed_info
-//  + TL_msg_new_detailed_info
-//
+//   - TL_msg_detailed_info
+//   - TL_msg_new_detailed_info
 type MsgDetailedInfo struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -1260,8 +1252,7 @@ func (m *TLMsgNewDetailedInfo) GetData2() *MsgDetailedInfo {
 }
 
 // MsgResendReq <--
-//  + TL_msg_resend_req
-//
+//   - TL_msg_resend_req
 type MsgResendReq struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -1374,8 +1365,7 @@ func (m *TLMsgResendReq) GetData2() *MsgResendReq {
 }
 
 // MsgsAck <--
-//  + TL_msgs_ack
-//
+//   - TL_msgs_ack
 type MsgsAck struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -1488,8 +1478,7 @@ func (m *TLMsgsAck) GetData2() *MsgsAck {
 }
 
 // MsgsAllInfo <--
-//  + TL_msgs_all_info
-//
+//   - TL_msgs_all_info
 type MsgsAllInfo struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -1610,8 +1599,7 @@ func (m *TLMsgsAllInfo) GetData2() *MsgsAllInfo {
 }
 
 // MsgsStateInfo <--
-//  + TL_msgs_state_info
-//
+//   - TL_msgs_state_info
 type MsgsStateInfo struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -1732,8 +1720,7 @@ func (m *TLMsgsStateInfo) GetData2() *MsgsStateInfo {
 }
 
 // MsgsStateReq <--
-//  + TL_msgs_state_req
-//
+//   - TL_msgs_state_req
 type MsgsStateReq struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -1846,8 +1833,7 @@ func (m *TLMsgsStateReq) GetData2() *MsgsStateReq {
 }
 
 // NewSession <--
-//  + TL_new_session_created
-//
+//   - TL_new_session_created
 type NewSession struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -1976,8 +1962,7 @@ func (m *TLNewSessionCreated) GetData2() *NewSession {
 }
 
 // Pong <--
-//  + TL_pong
-//
+//   - TL_pong
 type Pong struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -2098,10 +2083,9 @@ func (m *TLPong) GetData2() *Pong {
 }
 
 // RpcDropAnswer <--
-//  + TL_rpc_answer_unknown
-//  + TL_rpc_answer_dropped_running
-//  + TL_rpc_answer_dropped
-//
+//   - TL_rpc_answer_unknown
+//   - TL_rpc_answer_dropped_running
+//   - TL_rpc_answer_dropped
 type RpcDropAnswer struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -2326,8 +2310,7 @@ func (m *TLRpcAnswerDropped) GetData2() *RpcDropAnswer {
 }
 
 // RpcError <--
-//  + TL_rpc_error
-//
+//   - TL_rpc_error
 type RpcError struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -2448,14 +2431,13 @@ func (m *TLRpcError) GetData2() *RpcError {
 }
 
 // TlsBlock <--
-//  + TL_tlsBlockString
-//  + TL_tlsBlockRandom
-//  + TL_tlsBlockZero
-//  + TL_tlsBlockDomain
-//  + TL_tlsBlockGrease
-//  + TL_tlsBlockPublicKey
-//  + TL_tlsBlockScope
-//
+//   - TL_tlsBlockString
+//   - TL_tlsBlockRandom
+//   - TL_tlsBlockZero
+//   - TL_tlsBlockDomain
+//   - TL_tlsBlockGrease
+//   - TL_tlsBlockPublicKey
+//   - TL_tlsBlockScope
 type TlsBlock struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -2880,8 +2862,7 @@ func (m *TLTlsBlockScope) GetData2() *TlsBlock {
 }
 
 // TlsClientHello <--
-//  + TL_tlsClientHello
-//
+//   - TL_tlsClientHello
 type TlsClientHello struct {
 	PredicateName        string        `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
@@ -2994,8 +2975,7 @@ func (m *TLTlsClientHello) GetData2() *TlsClientHello {
 }
 
 // help_ConfigSimple <--
-//  + TL_help_configSimple
-//
+//   - TL_help_configSimple
 type Help_ConfigSimple struct {
 	PredicateName        string             `protobuf:"bytes,1,opt,name=predicate_name,json=predicateName,proto3" json:"predicate_name,omitempty"`
 	Constructor          TLConstructor      `protobuf:"varint,2,opt,name=constructor,proto3,enum=mtproto.TLConstructor" json:"constructor,omitempty"`
