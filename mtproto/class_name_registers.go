@@ -2638,8 +2638,8 @@ var clazzNameRegisters2 = map[string]map[int]int32{
 		150: -1885878744, // 8f97c628
 		149: -1885878744, // 8f97c628
 		148: -1885878744, // 8f97c628
-		147: 1570352622,  // 5d99adee
-		146: 1570352622,  // 5d99adee
+		147: 1127339470,  // 4331d5ce
+		146: 1127339470,  // 4331d5ce
 		145: 1570352622,  // 5d99adee
 		144: 1073147056,  // 3ff6ecb0
 		143: 1073147056,  // 3ff6ecb0
@@ -17274,7 +17274,7 @@ var clazzNameRegisters2 = map[string]map[int]int32{
 		141: -2131827673, // 80eee427
 		140: -2131827673, // 80eee427
 		139: -2131827673, // 80eee427
-		0:   525951675,   // 0x1f5962bb
+		0:   1364251557,  // 5150d3a5
 
 	},
 	Predicate_auth_signIn: {
@@ -17290,7 +17290,7 @@ var clazzNameRegisters2 = map[string]map[int]int32{
 		141: -1126886015, // bcd51581
 		140: -1126886015, // bcd51581
 		139: -1126886015, // bcd51581
-		0:   2123959832,  // 0x7e990e18
+		0:   9355883,     // 8ec26b
 
 	},
 	Predicate_auth_logOut: {
@@ -25907,7 +25907,7 @@ var clazzIdNameRegisters2 = map[int32]string{
 	1820868141:  Predicate_channels_editForumTopic,                            // 6c883e2d
 	1682413576:  Predicate_messages_channelMessages,                           // 64479808
 	-158027602:  Predicate_updateChannelPinnedTopic,                           // f694b0ae
-	1570352622:  Predicate_user,                                               // 5d99adee
+	1127339470:  Predicate_user,                                               // 4331d5ce
 	-2107528095: Predicate_channel,                                            // 8261ac61
 	-1007549728: Predicate_updateUserName,                                     // c3f202e0
 	-299124375:  Predicate_updateDraftMessage,                                 // ee2bb969
@@ -25932,6 +25932,7 @@ var clazzIdNameRegisters2 = map[int32]string{
 	-1240849242: Predicate_messages_stickerSet,                                // b60a24a6
 	451763941:   Predicate_stickerSetFullCovered,                              // 1aed5ee5
 	-646342540:  Predicate_inputMediaInvoice,                                  // d9799874
+	1570352622:  Predicate_user,                                               // 5d99adee
 	-2074799289: Predicate_messageMediaInvoice,                                // 84551347
 	1073147056:  Predicate_user,                                               // 3ff6ecb0
 	-779165146:  Predicate_chatFull,                                           // d18ee226
@@ -26091,8 +26092,8 @@ var clazzIdNameRegisters2 = map[int32]string{
 	353634673:   Predicate_account_updateVerified,                             // 0x15140971
 	-501253832:  Predicate_auth_toggleBan,                                     // 0xe21f7938
 	1511592262:  Predicate_biz_invokeBizDataRaw,                               // 0x5a191146
-	2123959832:  Predicate_auth_signIn,                                        // 0x7e990e18
-	525951675:   Predicate_auth_signUp,                                        // 0x1f5962bb
+	9355883:     Predicate_auth_signIn,                                        // 8ec26b
+	1364251557:  Predicate_auth_signUp,                                        // 5150d3a5
 
 }
 
