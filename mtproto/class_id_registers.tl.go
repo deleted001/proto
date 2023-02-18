@@ -1172,6 +1172,11 @@ var clazzIdRegisters2 = map[int32]func() TLObject{
 		o.Data2.Constructor = -1626209256
 		return o
 	},
+	1923180664: func() TLObject { // 0x72a16878
+		o := MakeTLChatBannedRights(nil)
+		o.Data2.Constructor = 1923180664
+		return o
+	},
 	-908914376: func() TLObject { // 0xc9d31138
 		o := MakeTLChatFull(nil)
 		o.Data2.Constructor = -908914376
