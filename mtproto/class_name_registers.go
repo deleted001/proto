@@ -2638,8 +2638,8 @@ var clazzNameRegisters2 = map[string]map[int]int32{
 		150: -1885878744, // 8f97c628
 		149: -1885878744, // 8f97c628
 		148: -1885878744, // 8f97c628
-		147: 1127339470,  // 4331d5ce
-		146: 1127339470,  // 4331d5ce
+		147: -1171539660, // ba2bb934
+		146: -1171539660, // ba2bb934
 		145: 1570352622,  // 5d99adee
 		144: 1073147056,  // 3ff6ecb0
 		143: 1073147056,  // 3ff6ecb0
@@ -25907,7 +25907,7 @@ var clazzIdNameRegisters2 = map[int32]string{
 	1820868141:  Predicate_channels_editForumTopic,                            // 6c883e2d
 	1682413576:  Predicate_messages_channelMessages,                           // 64479808
 	-158027602:  Predicate_updateChannelPinnedTopic,                           // f694b0ae
-	1127339470:  Predicate_user,                                               // 4331d5ce
+	-1171539660: Predicate_user,                                               // ba2bb934
 	-2107528095: Predicate_channel,                                            // 8261ac61
 	-1007549728: Predicate_updateUserName,                                     // c3f202e0
 	-299124375:  Predicate_updateDraftMessage,                                 // ee2bb969
