@@ -49,6 +49,7 @@ const (
 	BANNED_SEND_POLLS    = 1 << 8
 	BANNED_CHANGE_INFO   = 1 << 10
 	BANNED_INVITE_USERS  = 1 << 15
+	FORBID_ADD_CONTACTS  = 1 << 16
 	BANNED_PIN_MESSAGES  = 1 << 17
 )
 
@@ -56,19 +57,20 @@ type BannedRights int64
 
 func MakeDefaultBannedRights() *ChatBannedRights {
 	return MakeTLChatBannedRights(&ChatBannedRights{
-		ViewMessages: false,
-		SendMessages: false,
-		SendMedia:    false,
-		SendStickers: false,
-		SendGifs:     false,
-		SendGames:    false,
-		SendInline:   false,
-		EmbedLinks:   false,
-		SendPolls:    false,
-		ChangeInfo:   false,
-		InviteUsers:  false,
-		PinMessages:  false,
-		UntilDate:    math.MaxInt32,
+		ViewMessages:      false,
+		SendMessages:      false,
+		SendMedia:         false,
+		SendStickers:      false,
+		SendGifs:          false,
+		SendGames:         false,
+		SendInline:        false,
+		EmbedLinks:        false,
+		SendPolls:         false,
+		ChangeInfo:        false,
+		InviteUsers:       false,
+		ForbidAddContacts: false,
+		PinMessages:       false,
+		UntilDate:         math.MaxInt32,
 	}).To_ChatBannedRights()
 }
 
@@ -78,19 +80,20 @@ func (m BannedRights) ToChatBannedRights() *ChatBannedRights {
 	}
 
 	return MakeTLChatBannedRights(&ChatBannedRights{
-		ViewMessages: (m & BANNED_VIEW_MESSAGES) != 0,
-		SendMessages: (m & BANNED_SEND_MESSAGES) != 0,
-		SendMedia:    (m & BANNED_SEND_MEDIA) != 0,
-		SendStickers: (m & BANNED_SEND_STICKERS) != 0,
-		SendGifs:     (m & BANNED_SEND_GIFS) != 0,
-		SendGames:    (m & BANNED_SEND_GAMES) != 0,
-		SendInline:   (m & BANNED_SEND_INLINE) != 0,
-		EmbedLinks:   (m & BANNED_EMBED_LINKS) != 0,
-		SendPolls:    (m & BANNED_SEND_POLLS) != 0,
-		ChangeInfo:   (m & BANNED_CHANGE_INFO) != 0,
-		InviteUsers:  (m & BANNED_INVITE_USERS) != 0,
-		PinMessages:  (m & BANNED_PIN_MESSAGES) != 0,
-		UntilDate:    int32(m >> 32),
+		ViewMessages:      (m & BANNED_VIEW_MESSAGES) != 0,
+		SendMessages:      (m & BANNED_SEND_MESSAGES) != 0,
+		SendMedia:         (m & BANNED_SEND_MEDIA) != 0,
+		SendStickers:      (m & BANNED_SEND_STICKERS) != 0,
+		SendGifs:          (m & BANNED_SEND_GIFS) != 0,
+		SendGames:         (m & BANNED_SEND_GAMES) != 0,
+		SendInline:        (m & BANNED_SEND_INLINE) != 0,
+		EmbedLinks:        (m & BANNED_EMBED_LINKS) != 0,
+		SendPolls:         (m & BANNED_SEND_POLLS) != 0,
+		ChangeInfo:        (m & BANNED_CHANGE_INFO) != 0,
+		InviteUsers:       (m & BANNED_INVITE_USERS) != 0,
+		ForbidAddContacts: (m & FORBID_ADD_CONTACTS) != 0,
+		PinMessages:       (m & BANNED_PIN_MESSAGES) != 0,
+		UntilDate:         int32(m >> 32),
 	}).To_ChatBannedRights()
 }
 
@@ -104,6 +107,7 @@ func (m *ChatBannedRights) hasRights() bool {
 		m.SendPolls ||
 		m.ChangeInfo ||
 		m.InviteUsers ||
+		m.ForbidAddContacts ||
 		m.PinMessages
 }
 
@@ -167,6 +171,10 @@ func (m *ChatBannedRights) CanInviteUsers(date int32) bool {
 	return !m.GetInviteUsers() || date >= m.UntilDate
 }
 
+func (m *ChatBannedRights) CanForbidAddContacts(date int32) bool {
+	return !m.GetForbidAddContacts() || date >= m.UntilDate
+}
+
 func (m *ChatBannedRights) CanPinMessages(date int32) bool {
 	return !m.GetPinMessages() || date >= m.UntilDate
 }
@@ -213,6 +221,9 @@ func (m *ChatBannedRights) ToBannedRights() BannedRights {
 	}
 	if m.GetInviteUsers() {
 		rights |= BANNED_INVITE_USERS
+	}
+	if m.GetForbidAddContacts() {
+		rights |= FORBID_ADD_CONTACTS
 	}
 	if m.GetPinMessages() {
 		rights |= BANNED_PIN_MESSAGES

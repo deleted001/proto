@@ -14342,8 +14342,8 @@ var clazzNameRegisters2 = map[string]map[int]int32{
 		150: -1626209256, // 9f120418
 		149: -1626209256, // 9f120418
 		148: -1626209256, // 9f120418
-		147: 1923180664,  // 72a16878
-		146: 1923180664,  // 72a16878
+		147: -1626209256, // 9f120418
+		146: -1626209256, // 9f120418
 		145: -1626209256, // 9f120418
 		144: -1626209256, // 9f120418
 		143: -1626209256, // 9f120418
@@ -25913,7 +25913,6 @@ var clazzIdNameRegisters2 = map[int32]string{
 	-299124375:  Predicate_updateDraftMessage,                                 // ee2bb969
 	1153291573:  Predicate_updateChannelReadMessagesContents,                  // 44bdd535
 	357013699:   Predicate_updateMessageReactions,                             // 154798c3
-	1923180664:  Predicate_chatBannedRights,                                   // 72a16878
 	1705297877:  Predicate_messages_sponsoredMessages,                         // 65a4c7d5
 	-1919060949: Predicate_account_getTheme,                                   // 8d9d742b
 	228423076:   Predicate_messages_sendMessage,                               // d9d75a4
