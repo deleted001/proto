@@ -19,6 +19,7 @@
 package mtproto
 
 // chatAdminRights#5fb224d5 flags:#
+//
 //	change_info:flags.0?true
 //	post_messages:flags.1?true
 //	edit_messages:flags.2?true
@@ -30,19 +31,19 @@ package mtproto
 //	anonymous:flags.10?true
 //	manage_call:flags.11?true
 //	other:flags.12?true = ChatAdminRights;
-//
 const (
-	ADMIN_CHANGE_INFO     int32 = 1 << 0
-	ADMIN_POST_MESSAGES   int32 = 1 << 1
-	ADMIN_EDIT_MESSAGES   int32 = 1 << 2
-	ADMIN_DELETE_MESSAGES int32 = 1 << 3
-	ADMIN_BAN_USERS       int32 = 1 << 4
-	ADMIN_INVITE_USERS    int32 = 1 << 5
-	ADMIN_PIN_MESSAGES    int32 = 1 << 7
-	ADMIN_ADD_ADMINS      int32 = 1 << 9
-	ADMIN_ANONYMOUS       int32 = 1 << 10
-	ADMIN_MANAGE_CALL     int32 = 1 << 11
-	ADMIN_OTHER           int32 = 1 << 12
+	ADMIN_CHANGE_INFO         int32 = 1 << 0
+	ADMIN_POST_MESSAGES       int32 = 1 << 1
+	ADMIN_EDIT_MESSAGES       int32 = 1 << 2
+	ADMIN_DELETE_MESSAGES     int32 = 1 << 3
+	ADMIN_BAN_USERS           int32 = 1 << 4
+	ADMIN_INVITE_USERS        int32 = 1 << 5
+	ADMIN_PIN_MESSAGES        int32 = 1 << 7
+	ADMIN_ADD_ADMINS          int32 = 1 << 9
+	ADMIN_ANONYMOUS           int32 = 1 << 10
+	ADMIN_MANAGE_CALL         int32 = 1 << 11
+	ADMIN_OTHER               int32 = 1 << 12
+	ADMIN_FORBID_ADD_CONTACTS int32 = 1 << 13
 )
 
 type AdminRights int32
@@ -84,6 +85,10 @@ func MakeChatAdminRightsHelper(adminRights *ChatAdminRights) AdminRights {
 		rights |= ADMIN_OTHER
 	}
 
+	if adminRights.GetForbidAddContacts() {
+		rights |= ADMIN_FORBID_ADD_CONTACTS
+	}
+
 	return AdminRights(rights)
 }
 
@@ -92,17 +97,18 @@ func (m AdminRights) ToChatAdminRights() *ChatAdminRights {
 		return nil
 	} else {
 		return MakeTLChatAdminRights(&ChatAdminRights{
-			ChangeInfo:     int32(m)&ADMIN_CHANGE_INFO != 0,
-			PostMessages:   int32(m)&ADMIN_POST_MESSAGES != 0,
-			EditMessages:   int32(m)&ADMIN_EDIT_MESSAGES != 0,
-			DeleteMessages: int32(m)&ADMIN_DELETE_MESSAGES != 0,
-			BanUsers:       int32(m)&ADMIN_BAN_USERS != 0,
-			InviteUsers:    int32(m)&ADMIN_INVITE_USERS != 0,
-			PinMessages:    int32(m)&ADMIN_PIN_MESSAGES != 0,
-			AddAdmins:      int32(m)&ADMIN_ADD_ADMINS != 0,
-			Anonymous:      int32(m)&ADMIN_ANONYMOUS != 0,
-			ManageCall:     int32(m)&ADMIN_MANAGE_CALL != 0,
-			Other:          int32(m)&ADMIN_OTHER != 0,
+			ChangeInfo:        int32(m)&ADMIN_CHANGE_INFO != 0,
+			PostMessages:      int32(m)&ADMIN_POST_MESSAGES != 0,
+			EditMessages:      int32(m)&ADMIN_EDIT_MESSAGES != 0,
+			DeleteMessages:    int32(m)&ADMIN_DELETE_MESSAGES != 0,
+			BanUsers:          int32(m)&ADMIN_BAN_USERS != 0,
+			InviteUsers:       int32(m)&ADMIN_INVITE_USERS != 0,
+			PinMessages:       int32(m)&ADMIN_PIN_MESSAGES != 0,
+			AddAdmins:         int32(m)&ADMIN_ADD_ADMINS != 0,
+			Anonymous:         int32(m)&ADMIN_ANONYMOUS != 0,
+			ManageCall:        int32(m)&ADMIN_MANAGE_CALL != 0,
+			Other:             int32(m)&ADMIN_OTHER != 0,
+			ForbidAddContacts: int32(m)&ADMIN_FORBID_ADD_CONTACTS != 0,
 		}).To_ChatAdminRights()
 	}
 }
@@ -155,8 +161,12 @@ func (m AdminRights) CanOther() bool {
 	return int32(m)&ADMIN_OTHER != 0
 }
 
+func (m AdminRights) CanForbidAddContacts() bool {
+	return int32(m)&ADMIN_FORBID_ADD_CONTACTS != 0
+}
+
 // DisallowMegagroup
-//////////////////////////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////////////////////
 func (m AdminRights) DisallowMegagroup() bool {
 	return m.CanPostMessages() || m.CanEditMessages()
 }
@@ -167,17 +177,18 @@ func (m AdminRights) DisallowChat() bool {
 
 func MakeDefaultChatAdminRights() *ChatAdminRights {
 	return MakeTLChatAdminRights(&ChatAdminRights{
-		ChangeInfo:     true,
-		PostMessages:   false,
-		EditMessages:   false,
-		DeleteMessages: true,
-		BanUsers:       true,
-		InviteUsers:    true,
-		PinMessages:    true,
-		AddAdmins:      false,
-		Anonymous:      false,
-		ManageCall:     true,
-		Other:          true,
+		ChangeInfo:        true,
+		PostMessages:      false,
+		EditMessages:      false,
+		DeleteMessages:    true,
+		BanUsers:          true,
+		InviteUsers:       true,
+		PinMessages:       true,
+		AddAdmins:         false,
+		Anonymous:         false,
+		ManageCall:        true,
+		Other:             true,
+		ForbidAddContacts: true,
 	}).To_ChatAdminRights()
 }
 
@@ -229,8 +240,12 @@ func (m *ChatAdminRights) CanOther() bool {
 	return m.GetOther()
 }
 
+func (m *ChatAdminRights) CanForbidAddContacts() bool {
+	return m.GetForbidAddContacts()
+}
+
 // DisallowMegagroup
-//////////////////////////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////////////////////
 func (m *ChatAdminRights) DisallowMegagroup() bool {
 	return m.CanPostMessages() || m.CanEditMessages()
 }
