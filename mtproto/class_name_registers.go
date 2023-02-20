@@ -17274,7 +17274,7 @@ var clazzNameRegisters2 = map[string]map[int]int32{
 		141: -2131827673, // 80eee427
 		140: -2131827673, // 80eee427
 		139: -2131827673, // 80eee427
-		0:   1364251557,  // 5150d3a5
+		0:   -312771885,  // ed5b7ad3
 
 	},
 	Predicate_auth_signIn: {
@@ -17290,7 +17290,7 @@ var clazzNameRegisters2 = map[string]map[int]int32{
 		141: -1126886015, // bcd51581
 		140: -1126886015, // bcd51581
 		139: -1126886015, // bcd51581
-		0:   9355883,     // 8ec26b
+		0:   1565223559,  // 5d4b6a87
 
 	},
 	Predicate_auth_logOut: {
@@ -26092,8 +26092,8 @@ var clazzIdNameRegisters2 = map[int32]string{
 	353634673:   Predicate_account_updateVerified,                             // 0x15140971
 	-501253832:  Predicate_auth_toggleBan,                                     // 0xe21f7938
 	1511592262:  Predicate_biz_invokeBizDataRaw,                               // 0x5a191146
-	9355883:     Predicate_auth_signIn,                                        // 8ec26b
-	1364251557:  Predicate_auth_signUp,                                        // 5150d3a5
+	1565223559:  Predicate_auth_signIn,                                        // 5d4b6a87
+	-312771885:  Predicate_auth_signUp,                                        // ed5b7ad3
 
 }
 
