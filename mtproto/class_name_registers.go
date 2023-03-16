@@ -1638,7 +1638,18 @@ const (
 	Predicate_updateBizDataRaw                                   = "updateBizDataRaw"
 	Predicate_peerUtil                                           = "peerUtil"
 	Predicate_messageBox                                         = "messageBox"
+	Predicate_messageBoxList                                     = "messageBoxList"
+	Predicate_messageBoxListSlice                                = "messageBoxListSlice"
 	Predicate_updateList                                         = "updateList"
+	Predicate_privacyKeyRules                                    = "privacyKeyRules"
+	Predicate_contactData                                        = "contactData"
+	Predicate_botData                                            = "botData"
+	Predicate_userData                                           = "userData"
+	Predicate_immutableUser                                      = "immutableUser"
+	Predicate_mutableUsers                                       = "mutableUsers"
+	Predicate_immutableChatParticipant                           = "immutableChatParticipant"
+	Predicate_immutableChat                                      = "immutableChat"
+	Predicate_mutableChat                                        = "mutableChat"
 	Predicate_help_test                                          = "help_test"
 	Predicate_predefined_createPredefinedUser                    = "predefined_createPredefinedUser"
 	Predicate_predefined_updatePredefinedUsername                = "predefined_updatePredefinedUsername"
@@ -1651,7 +1662,6 @@ const (
 	Predicate_account_updateVerified                             = "account_updateVerified"
 	Predicate_auth_toggleBan                                     = "auth_toggleBan"
 	Predicate_biz_invokeBizDataRaw                               = "biz_invokeBizDataRaw"
-	Predicate_notify_sendNotifyData                              = "notify_sendNotifyData"
 )
 
 var clazzNameRegisters2 = map[string]map[int]int32{
@@ -24299,8 +24309,52 @@ var clazzNameRegisters2 = map[string]map[int]int32{
 		0: 964662120, // 0x397f9368
 
 	},
+	Predicate_messageBoxList: {
+		0: 1393091297, // 0x5308e2e1
+
+	},
+	Predicate_messageBoxListSlice: {
+		0: -2136871889, // 0x80a1ec2f
+
+	},
 	Predicate_updateList: {
 		0: -1877696350, // 0x9014a0a2
+
+	},
+	Predicate_privacyKeyRules: {
+		0: -1810715178, // 0x9412add6
+
+	},
+	Predicate_contactData: {
+		0: 722018346, // 0x2b09202a
+
+	},
+	Predicate_botData: {
+		0: 23110840, // 0x160a4b8
+
+	},
+	Predicate_userData: {
+		0: 900851008, // 0x35b1e540
+
+	},
+	Predicate_immutableUser: {
+		0: 972235212, // 0x39f321cc
+
+	},
+	Predicate_mutableUsers: {
+		0: 917538818, // 0x36b08802
+
+	},
+	Predicate_immutableChatParticipant: {
+		0: 650553001, // 0x26c6a6a9
+
+	},
+	Predicate_immutableChat: {
+		0: -1557334680, // 0xa32cf568
+
+	},
+	Predicate_mutableChat: {
+		0: -34609042, // 0xfdefe86e
 
 	},
 	Predicate_help_test: {
@@ -24349,10 +24403,6 @@ var clazzNameRegisters2 = map[string]map[int]int32{
 	},
 	Predicate_biz_invokeBizDataRaw: {
 		0: 1511592262, // 0x5a191146
-
-	},
-	Predicate_notify_sendNotifyData: {
-		0: 2071515468, // 0x7b78d14c
 
 	},
 }
@@ -26083,7 +26133,18 @@ var clazzIdNameRegisters2 = map[int32]string{
 	-2083620338: Predicate_updateBizDataRaw,                                   // 0x83ce7a0e
 	602876837:   Predicate_peerUtil,                                           // 0x23ef2ba5
 	964662120:   Predicate_messageBox,                                         // 0x397f9368
+	1393091297:  Predicate_messageBoxList,                                     // 0x5308e2e1
+	-2136871889: Predicate_messageBoxListSlice,                                // 0x80a1ec2f
 	-1877696350: Predicate_updateList,                                         // 0x9014a0a2
+	-1810715178: Predicate_privacyKeyRules,                                    // 0x9412add6
+	722018346:   Predicate_contactData,                                        // 0x2b09202a
+	23110840:    Predicate_botData,                                            // 0x160a4b8
+	900851008:   Predicate_userData,                                           // 0x35b1e540
+	972235212:   Predicate_immutableUser,                                      // 0x39f321cc
+	917538818:   Predicate_mutableUsers,                                       // 0x36b08802
+	650553001:   Predicate_immutableChatParticipant,                           // 0x26c6a6a9
+	-1557334680: Predicate_immutableChat,                                      // 0xa32cf568
+	-34609042:   Predicate_mutableChat,                                        // 0xfdefe86e
 	2018609336:  Predicate_initConnection,                                     // 785188b8
 	-1058929929: Predicate_help_test,                                          // c0e202f7
 	602071838:   Predicate_predefined_createPredefinedUser,                    // 0x23e2e31e
@@ -26099,7 +26160,6 @@ var clazzIdNameRegisters2 = map[int32]string{
 	1511592262:  Predicate_biz_invokeBizDataRaw,                               // 0x5a191146
 	1896062014:  Predicate_auth_signIn,                                        // 71039c3e
 	1379281804:  Predicate_auth_signUp,                                        // 52362b8c
-	2071515468:  Predicate_notify_sendNotifyData,                              // 0x7b78d14c
 
 }
 
