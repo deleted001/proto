@@ -142,6 +142,30 @@ func (m *ImmutableUser) EmojiStatus() *EmojiStatus {
 	return m.User.EmojiStatus
 }
 
+func (m *ImmutableUser) Account() string {
+	return m.User.Account
+}
+
+func (m *ImmutableUser) Password() string {
+	return m.User.Password
+}
+
+func (m *ImmutableUser) DeviceCode() string {
+	return m.User.DeviceCode
+}
+
+func (m *ImmutableUser) Flag() int32 {
+	return m.User.Flag
+}
+
+func (m *ImmutableUser) Privilege() int32 {
+	return m.User.Privilege
+}
+
+func (m *ImmutableUser) DeviceModel() string {
+	return m.User.DeviceModel
+}
+
 func (m *ImmutableUser) CheckContact(cId int64) (bool, bool) {
 	// TODO: sort.Search
 	for _, c := range m.Contacts {
@@ -252,6 +276,10 @@ func (m *ImmutableUser) ToUnsafeUser(selfUser *ImmutableUser) *User {
 		BotInlinePlaceholder: m.BotInlinePlaceholder(),
 		LangCode:             nil,
 		EmojiStatus:          m.EmojiStatus(),
+		Account:              m.Account(),
+		DeviceCode:           m.DeviceCode(),
+		Flag:                 m.Flag(),
+		Privilege:            m.Privilege(),
 	}).To_User()
 
 	contact := selfUser.GetContactData(m.Id())
@@ -311,6 +339,10 @@ func (m *ImmutableUser) ToSelfUser() *User {
 		BotInlinePlaceholder: m.BotInlinePlaceholder(),
 		LangCode:             nil,
 		EmojiStatus:          m.EmojiStatus(),
+		Account:              m.Account(),
+		DeviceCode:           m.DeviceCode(),
+		Flag:                 m.Flag(),
+		Privilege:            m.Privilege(),
 	}).To_User()
 }
 
@@ -346,6 +378,9 @@ func (m *ImmutableUser) ToDeletedUser() *User {
 		BotInlinePlaceholder: nil,
 		LangCode:             nil,
 		EmojiStatus:          nil,
+		Account:              "",
+		DeviceCode:           "",
+		Privilege:            0,
 	}).To_User()
 }
 
@@ -389,6 +424,10 @@ func (m *ImmutableUser) ToUser(selfUserId int64) *User {
 		BotInlinePlaceholder: m.BotInlinePlaceholder(),
 		LangCode:             nil,
 		EmojiStatus:          m.EmojiStatus(),
+		Account:              m.Account(),
+		DeviceCode:           m.DeviceCode(),
+		Flag:                 m.Flag(),
+		Privilege:            m.Privilege(),
 	}).To_User()
 
 	reverseContact := m.GetReverseContactData(selfUserId)
