@@ -1357,6 +1357,11 @@ var clazzIdRegisters2 = map[int32]func() TLObject{
 		o.Data2.Constructor = -1255369827
 		return o
 	},
+	1668478185: func() TLObject { // 0x6372f4e9
+		o := MakeTLContent(nil)
+		o.Data2.Constructor = 1668478185
+		return o
+	},
 	2104790276: func() TLObject { // 0x7d748d04
 		o := MakeTLDataJSON(nil)
 		o.Data2.Constructor = 2104790276
@@ -3920,6 +3925,11 @@ var clazzIdRegisters2 = map[int32]func() TLObject{
 	1869903447: func() TLObject { // 0x6f747657
 		o := MakeTLPageCaption(nil)
 		o.Data2.Constructor = 1869903447
+		return o
+	},
+	-498331317: func() TLObject { // 0xe24c114b
+		o := MakeTLPageContent(nil)
+		o.Data2.Constructor = -498331317
 		return o
 	},
 	-1188055347: func() TLObject { // 0xb92fb6cd
@@ -8792,6 +8802,11 @@ var clazzIdRegisters2 = map[int32]func() TLObject{
 	1511592262: func() TLObject { // 0x5a191146
 		return &TLBizInvokeBizDataRaw{
 			Constructor: 1511592262,
+		}
+	},
+	-1824108917: func() TLObject { // 0x93464e8b
+		return &TLBizGetContentList{
+			Constructor: -1824108917,
 		}
 	},
 }
