@@ -508,6 +508,7 @@ var rpcContextRegisters = map[string]RPCContextTuple{
 	"TLMessagesSendWebViewData":                  RPCContextTuple{"/mtproto.RPCWebview/messages_sendWebViewData", func() interface{} { return new(Updates) }},
 	"TLBizInvokeBizDataRaw":                      RPCContextTuple{"/mtproto.RPCBiz/biz_invokeBizDataRaw", func() interface{} { return new(BizDataRaw) }},
 	"TLBizGetContentList":                        RPCContextTuple{"/mtproto.RPCBiz/biz_getContentList", func() interface{} { return new(PageContent) }},
+	"TLBizGetExplore":                            RPCContextTuple{"/mtproto.RPCBiz/biz_getExplore", func() interface{} { return new(Explore) }},
 }
 
 func FindRPCContextTuple(t interface{}) *RPCContextTuple {

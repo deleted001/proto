@@ -1652,6 +1652,7 @@ const (
 	Predicate_mutableChat                                        = "mutableChat"
 	Predicate_content                                            = "content"
 	Predicate_pageContent                                        = "pageContent"
+	Predicate_explore                                            = "explore"
 	Predicate_help_test                                          = "help_test"
 	Predicate_predefined_createPredefinedUser                    = "predefined_createPredefinedUser"
 	Predicate_predefined_updatePredefinedUsername                = "predefined_updatePredefinedUsername"
@@ -1665,6 +1666,7 @@ const (
 	Predicate_auth_toggleBan                                     = "auth_toggleBan"
 	Predicate_biz_invokeBizDataRaw                               = "biz_invokeBizDataRaw"
 	Predicate_biz_getContentList                                 = "biz_getContentList"
+	Predicate_biz_getExplore                                     = "biz_getExplore"
 )
 
 var clazzNameRegisters2 = map[string]map[int]int32{
@@ -24368,6 +24370,10 @@ var clazzNameRegisters2 = map[string]map[int]int32{
 		0: -498331317, // 0xe24c114b
 
 	},
+	Predicate_explore: {
+		0: -1864680871, // 0x90db3a59
+
+	},
 	Predicate_help_test: {
 		0: -1058929929, // c0e202f7
 
@@ -24418,6 +24424,10 @@ var clazzNameRegisters2 = map[string]map[int]int32{
 	},
 	Predicate_biz_getContentList: {
 		0: -1824108917, // 0x93464e8b
+
+	},
+	Predicate_biz_getExplore: {
+		0: 1230435094, // 0x4956f316
 
 	},
 }
@@ -26162,6 +26172,7 @@ var clazzIdNameRegisters2 = map[int32]string{
 	-34609042:   Predicate_mutableChat,                                        // 0xfdefe86e
 	1668478185:  Predicate_content,                                            // 0x6372f4e9
 	-498331317:  Predicate_pageContent,                                        // 0xe24c114b
+	-1864680871: Predicate_explore,                                            // 0x90db3a59
 	2018609336:  Predicate_initConnection,                                     // 785188b8
 	-1058929929: Predicate_help_test,                                          // c0e202f7
 	602071838:   Predicate_predefined_createPredefinedUser,                    // 0x23e2e31e
@@ -26176,6 +26187,7 @@ var clazzIdNameRegisters2 = map[int32]string{
 	-501253832:  Predicate_auth_toggleBan,                                     // 0xe21f7938
 	1511592262:  Predicate_biz_invokeBizDataRaw,                               // 0x5a191146
 	-1824108917: Predicate_biz_getContentList,                                 // 0x93464e8b
+	1230435094:  Predicate_biz_getExplore,                                     // 0x4956f316
 	1896062014:  Predicate_auth_signIn,                                        // 71039c3e
 	1379281804:  Predicate_auth_signUp,                                        // 52362b8c
 
