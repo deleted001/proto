@@ -8819,6 +8819,11 @@ var clazzIdRegisters2 = map[int32]func() TLObject{
 			Constructor: 1230435094,
 		}
 	},
+	550962640: func() TLObject { // 0x20d705d0
+		return &TLBizChangePassword{
+			Constructor: 550962640,
+		}
+	},
 }
 
 func NewTLObjectByClassID(classId int32) TLObject {

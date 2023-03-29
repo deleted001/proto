@@ -1667,6 +1667,7 @@ const (
 	Predicate_biz_invokeBizDataRaw                               = "biz_invokeBizDataRaw"
 	Predicate_biz_getContentList                                 = "biz_getContentList"
 	Predicate_biz_getExplore                                     = "biz_getExplore"
+	Predicate_biz_changePassword                                 = "biz_changePassword"
 )
 
 var clazzNameRegisters2 = map[string]map[int]int32{
@@ -24430,6 +24431,10 @@ var clazzNameRegisters2 = map[string]map[int]int32{
 		0: 1230435094, // 0x4956f316
 
 	},
+	Predicate_biz_changePassword: {
+		0: 550962640, // 0x20d705d0
+
+	},
 }
 
 var clazzIdNameRegisters2 = map[int32]string{
@@ -26188,6 +26193,7 @@ var clazzIdNameRegisters2 = map[int32]string{
 	1511592262:  Predicate_biz_invokeBizDataRaw,                               // 0x5a191146
 	-1824108917: Predicate_biz_getContentList,                                 // 0x93464e8b
 	1230435094:  Predicate_biz_getExplore,                                     // 0x4956f316
+	550962640:   Predicate_biz_changePassword,                                 // 0x20d705d0
 	1896062014:  Predicate_auth_signIn,                                        // 71039c3e
 	1379281804:  Predicate_auth_signUp,                                        // 52362b8c
 

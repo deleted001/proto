@@ -509,6 +509,7 @@ var rpcContextRegisters = map[string]RPCContextTuple{
 	"TLBizInvokeBizDataRaw":                      RPCContextTuple{"/mtproto.RPCBiz/biz_invokeBizDataRaw", func() interface{} { return new(BizDataRaw) }},
 	"TLBizGetContentList":                        RPCContextTuple{"/mtproto.RPCBiz/biz_getContentList", func() interface{} { return new(PageContent) }},
 	"TLBizGetExplore":                            RPCContextTuple{"/mtproto.RPCBiz/biz_getExplore", func() interface{} { return new(Explore) }},
+	"TLBizChangePassword":                        RPCContextTuple{"/mtproto.RPCBiz/biz_changePassword", func() interface{} { return new(Bool) }},
 }
 
 func FindRPCContextTuple(t interface{}) *RPCContextTuple {
