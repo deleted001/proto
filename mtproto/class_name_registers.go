@@ -1650,7 +1650,6 @@ const (
 	Predicate_immutableChatParticipant                           = "immutableChatParticipant"
 	Predicate_immutableChat                                      = "immutableChat"
 	Predicate_mutableChat                                        = "mutableChat"
-	Predicate_content                                            = "content"
 	Predicate_pageContent                                        = "pageContent"
 	Predicate_explore                                            = "explore"
 	Predicate_help_test                                          = "help_test"
@@ -24363,16 +24362,12 @@ var clazzNameRegisters2 = map[string]map[int]int32{
 		0: -34609042, // 0xfdefe86e
 
 	},
-	Predicate_content: {
-		0: 1668478185, // 0x6372f4e9
-
-	},
 	Predicate_pageContent: {
-		0: -498331317, // 0xe24c114b
+		0: 213559549, // 0xcbaa8fd
 
 	},
 	Predicate_explore: {
-		0: -1864680871, // 0x90db3a59
+		0: 571713117, // 0x2213a65d
 
 	},
 	Predicate_help_test: {
@@ -26175,9 +26170,8 @@ var clazzIdNameRegisters2 = map[int32]string{
 	650553001:   Predicate_immutableChatParticipant,                           // 0x26c6a6a9
 	-1557334680: Predicate_immutableChat,                                      // 0xa32cf568
 	-34609042:   Predicate_mutableChat,                                        // 0xfdefe86e
-	1668478185:  Predicate_content,                                            // 0x6372f4e9
-	-498331317:  Predicate_pageContent,                                        // 0xe24c114b
-	-1864680871: Predicate_explore,                                            // 0x90db3a59
+	213559549:   Predicate_pageContent,                                        // 0xcbaa8fd
+	571713117:   Predicate_explore,                                            // 0x2213a65d
 	2018609336:  Predicate_initConnection,                                     // 785188b8
 	-1058929929: Predicate_help_test,                                          // c0e202f7
 	602071838:   Predicate_predefined_createPredefinedUser,                    // 0x23e2e31e
